@@ -48,7 +48,7 @@ void server_sess_open(server_sess_t *sess)
     PANIC("Error during starting listening on the socket (listen)");
   }
 
-  printf("Simple Chat Server started on port %d\n", sess->port);  // Use sess->port instead of SERVER_PORT
+  printf("Simple Chat Server started on port %d\n", sess->port);
 }
 
 void server_sess_set_port(server_sess_t *sess, int port)
