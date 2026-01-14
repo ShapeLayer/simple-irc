@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+if [[ -z $1 || $1 == "help" ]]; then
+  echo "Usage: $0 [build|run|kill|rmi]"
+  exit 1
+elif [[ $1 == "build" ]]; then
+  docker build . -t simple-irc-server
+  exit 0
+elif [[ $1 == "run" ]]; then
+  docker run --name simple-irc-server -d -p 6667:6667 simple-irc-server
+  exit 0
+elif [[ $1 == "kill" ]]; then
+  docker kill simple-irc-server
+  docker rm simple-irc-server
+  exit 0
+elif [[ $1 == "rmi" ]]; then
+  docker rmi simple-irc-server
+  exit 0
+else
+  echo "Unknown command: $1"
+  exit 1
+fi
