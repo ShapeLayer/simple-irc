@@ -2,7 +2,7 @@
 
 ![](./.static/demo.png)
 
-The 3rd report task's implementation for 〈Network Systems(ネットワークシステム)〉 course at Saga University.
+The implementation of task's requirements for 〈Network Systems(ネットワークシステム)〉 course at Saga University.
 
 ## Getting Started
 
